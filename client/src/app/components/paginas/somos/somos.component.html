@@ -1,0 +1,157 @@
+
+
+
+
+
+<div class="texto">
+  <div class="imagen1">
+      <img src="../../../../assets/img/descarga.jpg" alt=" referencial"height="200px" width="500px">
+          </div>
+          <div class="texto1">
+
+  <h2> QUIÉNES SOMOS   </h2>
+  <br>
+  <br>
+  <p>
+La Biblioteca de la Universidad de Alicante, en adelante Biblioteca Universitaria, es un servicio universitario de apoyo al aprendizaje, la docencia, la investigación, la cultura y las actividades relacionadas con el funcionamiento y la gestión de la Universidad en su conjunto.
+
+  Es un servicio central de la Universidad  y cuenta con 7 puntos de atención distribuidos en su mayoría dentro del Campus Universitario.
+
+  </p>
+ <br>
+  <div>
+     <h2>MISIÓN   </h2>
+      <br>
+  <br>
+      <p>
+La Dirección de Bibliotecas de la Universidad del Desarrollo tiene como misión aportar activamente al logro de los objetivos institucionales, contribuyendo al desarrollo de las actividades académicas, de investigación y de extensión. Proporciona un conjunto de colecciones, herramientas y servicios, especialmente desarrollados para satisfacer las necesidades de información de estudiantes, docentes, investigadores y colaboradores de la Universidad
+<br>
+  <br>
+  <br>
+  <br>
+      </p>
+
+   </div>
+          </div>
+
+          <div class="imagen2">
+              <img src="../../../../assets/img/ebiblio-1-1024x513.png" alt=" referencial" height="350px" width="500px">
+                  </div>
+
+            <div class="texto2">
+
+      <h2> ¿Qué ofrecemos?    </h2>
+
+  <br>
+  <br>
+  <br>
+      <p>
+Más de 700.000 volúmenes, 12.000 títulos de revistas, más de 20 títulos de prensa actual, y una gran cantidad de otros materiales como CDs, DVDs, mapas, etc., que puede consultar en la Biblioteca o llevarse en préstamo.
+      Un importante material en soporte electrónico: más de 80.000 monografías de diversas áreas de conocimiento, más de 20.000 revistas, unos 80 bases de datos y portales de información científica, 27 títulos de prensa, etc.que puede consultar desde casa y desde la Universidad.
+      Una zona de referencia en todas las bibliotecas donde podrá consultar material básico para comenzar a realizar un trabajo (diccionarios temáticos, generales, enciclopedias, biografías, libros deestilo, legislación...)
+      Además, un magnífico patrimonio bibliográfico de obras del fondo antiguo (más de 15.000 obras); un fondo específico de Canarias (unas 35.000 monografías y casi 2.000 revistas y periódicos) y un fondo de tesis y tesinas de la ULL (más de 4.500, muchas de ellas accesibles en línea).
+
+      </p>
+
+  </div>
+
+
+
+</div>
+<div class="wrapper">
+    <div class="inner">
+      <form   #forma="ngForm" (ngSubmit)="submit()" >
+        <h3>Contactanos</h3>
+        <p>Si tiene una duda o una sugerencia porfavor rellene el formulario.</p>
+
+                  <div class="formulario__grupo" id="grupo__nombre">
+                    <label for="name"><b>Nombre</b></label>
+                    <input
+                            type="text"
+                            #name="ngModel"
+                            [(ngModel)]="comentario.nombre"
+
+                            name="names"
+                            minlength="3"
+                            class="form-control"
+                            required
+                            [ngClass]="{'is-valid': !name.invalid, 'is-invalid': name.invalid}"
+                          />
+
+                    <div  *ngIf="name.invalid && (name.dirty || name.touched)">
+
+                      <div [hidden]="!name.hasError('required')">
+                       <p style="color:red;">     Introduzca un nombre con mas de 3 caracteres     </p>
+                      </div>
+                    </div>
+      </div>
+
+
+
+                  <div class="formulario__grupo"  id="grupo__correo">
+        <label class="form-group">
+          <label for="name"><b>Correo:</b></label>
+          <input
+            type="email"
+            #email="ngModel"
+            [(ngModel)]="comentario.correo"
+            name="email"
+            class="form-control"
+            required
+            [ngClass]="{'is-valid': !email.invalid, 'is-invalid': email.invalid}"
+            pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+          />
+          <div class="invalid-feedback" *ngIf="email.invalid && (email.dirty || email.touched)">
+            <div *ngIf="email.hasError('required')">
+             <p style="color:red;">Introduzca un correo electrónico válido por favor </p>
+            </div>
+            <div *ngIf="email.errors && email.hasError('pattern')">
+             <p style="color:red;"> El correo electrónico no sigue el formato correcto. Sigue este ejemplo: anartz@mugika.com  </p>
+
+            </div>
+          </div>
+
+
+        </label>
+                  </div>
+
+
+        <label class="form-group" >
+
+
+
+
+
+          <span class="border"></span>
+        </label>
+
+                  <div class="formulario__grupo" id="grupo__comentario">
+
+          <textarea name="comentarios"
+          type="text"
+          #comenta="ngModel"
+          id="comentarios"class="form-control"
+          [(ngModel)]="comentario.DESCIPCION"
+          required
+          minlength="1"
+          maxlength="300"
+          [ngClass]="{'is-valid': !comenta.invalid, 'is-invalid': comenta.invalid}"
+          ></textarea>
+          <div class="invalid-feedback" *ngIf="comenta.invalid && (comenta.dirty || comenta.touched)">
+            <div *ngIf="email.hasError('required')">
+             <p style="color:red;">Debe de introducir un mensaje, no pude ir en blanco </p>
+            </div>
+            <div *ngIf="forma.hasError('disabled')">
+              <p style="color:red;">Debe de introducir un mensaje, no pude ir en blanco </p>
+             </div>
+          </div>
+                        </div>
+                        <div class="col-lg">
+                          <button  type="submit" [disabled]="!forma.valid" class="signup-btn">Enviar</button>
+                        </div>
+
+      </form>
+
+    </div>
+  </div>
+

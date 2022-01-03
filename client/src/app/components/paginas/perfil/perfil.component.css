@@ -1,0 +1,171 @@
+*  {
+  box-sizing: border-box;
+
+}
+.parent {
+  display: grid;
+
+  }
+  .form_personal{
+
+          height: 550px;
+          width: 850px;
+          margin-left: 80px;
+          background-color: rgb(219, 213, 213);
+  }
+  .botons  {
+      margin-top: 15px ;
+      border: 1px solid #fbaf32;
+      padding: 15px;
+      background-color: #fbaf32;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: 'Helvetica',
+
+  }
+  .form_usuario{
+
+
+      height: 310px;
+      width: 850px;
+      margin-left: 80px;
+      background-color: rgb(219, 213, 213);
+
+
+}
+
+.diseño{
+  list-style: none;
+padding: 20px;
+;
+}
+.lista{
+  list-style: none;
+  font: 50px sans-serif;
+  color: darkgrey;
+
+}
+
+  .div1 { grid-area: 1/ 1 / 2 / 6;
+  background-color: aqua;
+  height: 80PX;
+}
+  .div2 { grid-area: 2 / 1 / 6 / 2;
+  background-color: rgb(231, 139, 139); }
+  .div3 { grid-area: 2 / 2 / 6 / 6; }
+
+    .input-group {
+      flex-wrap:wrap;
+      width:100%
+    }
+    .notification {
+      align-items: center;
+      background-color: var(--verde);
+      border-radius: 5px;
+      box-shadow: 8px 16px 32px 0px var(--shadow);
+      color: var(--blanco);
+      display: none;
+      font-family: var(--secondary-font);
+      height: 50px;
+      justify-content: center;
+      position: fixed;
+      right: 24px;
+      top: 24px;
+      width: 300px;
+    }
+
+    .controls {
+      width: 100%;
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 9px;
+      border: 1px solid #070707;
+      font-family: 'calibri';
+      font-size: 18px;
+      color: rgb(0, 0, 0);
+    }
+    .controls-error {
+      width: 100%;
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      border: 1px solid #f80303;
+      font-family: 'calibri';
+      font-size: 18px;
+      color: rgb(255, 0, 0);
+    }
+    .form-register p {
+      height: 40px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 40px;
+    }
+
+    .form-register a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .form-register a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+
+    .send-button {
+      align-items: center;
+      background-color: var(--gris-oscuro);
+      border-radius: 5px;
+      color: white;
+      font-family: var(--secondary-font);
+      display: flex;
+      height: 50px;
+      justify-content: center;
+      margin-bottom: 48px;
+      width: 150px;
+      margin-left: auto;
+    }
+   .mCS_img_loaded{
+       height: 120px;
+       margin-left: 30px;
+
+   }
+
+
+
+    .formulario_grupo-incorrecto .formulario_input {
+        width: 100%;
+      background: #000000;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      border: 1px solid #f80303;
+      font-family: 'calibri';
+      font-size: 18px;
+      color: white;
+    }
+
+
+    .formulario__input-error {
+        font-size: 1px;
+        margin-bottom: 0;
+        display: none;
+    }
+
+    .formulario__input-error-activo {
+        display: block;
+      font-size:small;
+      color: #f80303;
+
+    }
+    .botons{
+      height:50px;
+      width:100px;
+      margin: -20px -50px;
+      position:relative;
+      top:50%;
+      left:40%;
+    }

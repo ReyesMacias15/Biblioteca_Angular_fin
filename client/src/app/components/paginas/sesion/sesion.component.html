@@ -1,0 +1,55 @@
+
+
+
+<body>
+
+    <main>
+        <div class="formulario_titulo">
+            <br>
+            <br>
+            <h1>
+               Inicio de sesión
+            </h1>
+            <!-- Fronte es la parte visual-->
+            <form method="post" class="formulario" id="formulario"  #forma="ngForm" (ngSubmit)="submit()"  >
+
+               <!--grupo correo-->
+               <div class ="formulario_grupo" id="grupo_Correo">
+                <label for="correo" class="formulario_label">Correo electronico</label>
+        <div class="formulario_grupo-input">
+            <input type="email"class="formulario_input"     [(ngModel)]="register.Correo" name="Correo" id="Correo" placeholder="ejemplocorreo@ejemplo.com">
+            <i class= "formulario_validacion-estado fas fa-times-circle"></i>
+        </div>
+            <p class="formulario_input-error"> El correo solo puede contener letras y numeros</p>
+    </div>
+
+
+                <!--grupo de contraseñas-->
+                <div class ="formulario_grupo" id="grupo_contraseña">
+                        <label for="contraseña" class="formulario_label">Contraseña</label>
+                    <div class="formulario_grupo-input">
+                        <input type="password"class="formulario_input" [(ngModel)]="register.CONTRASENA"  name="contraseña" id="contraseña">
+                        <i class= "formulario_validacion-estado fas fa-times-circle"></i>
+                    </div>
+                        <p class="formulario_input-error"> La contraseña debe contener 5 digitos como minimo y debe incluir letras, numeros y signos</p>
+                </div>
+
+
+
+
+
+
+
+                <div class="formulario_mensaje" id="formulario_mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor, complete todos los datos correctamente </p>
+                </div>
+
+                <div  class = " formulario_grupo formulario_grupo-btn-enviar " >
+                    <br>
+                    <input  class="button-regresar"  type = "submit"  value="Enviar">
+                    <p  class = " formulario_mensaje-exito " id = " formulario_mensaje-exito " > Formulario enviado exitosamente! </p >
+                    <a  id="back" class="button-regresar">Regresar</a>
+                </div >
+            </form>
+<script src="../../../../assets/js/sesion.js" type="text/javascript"></script>
+

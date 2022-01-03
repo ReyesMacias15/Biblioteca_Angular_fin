@@ -1,0 +1,187 @@
+
+    <div id="ctn-bars-search">
+      <input type="text" id="inputSearch" placeholder="¿Qué deseas buscar?">
+  </div>
+
+
+
+  <div id="cover-ctn-search"></div>
+
+
+  <!--Portada-->
+
+  <div class="container-all" id="move-content">
+
+
+  <div class="blog-container-cover">
+      <div class="container-info-cover">
+          <h1>¡Encuentra tu libro de interes!</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam aliquam quis fuga beatae blanditiis assumenda.</p>
+      </div>
+  </div>
+
+  <div class="container-post">
+
+      <input type="radio" id="TODOS" name="categories" value="TODOS" checked>
+      <input type="radio" id="HTML" name="categories" value="HTML">
+      <input type="radio" id="CSS" name="categories" value="CSS">
+      <input type="radio" id="JS" name="categories" value="JS">
+      <input type="radio" id="PHP" name="categories" value="PHP">
+      <input type="radio" id="NODEJS" name="categories" value="NODEJS">
+      <input type="radio" id="VUE" name="categories" value="VUE">
+      <br>
+  <H1>Encuentra el libro que deseas agregando sus características</H1>
+  <br>
+  <form #forma="ngForm" (ngSubmit)="submit()" >
+    <!-- Grupo: Nombre del libro-->
+    <div class="formulario__grupo" id="grupo__usuario">
+      <label for="usuario" class="formulario__label">Nombre del libro</label>
+      <div class="formulario__grupo-input">
+        <input type="text" class="formulario__input" name="usuario" id="usuario"    [(ngModel)]="busqueda.Nombre" placeholder="Ingresa el nombre del libro que buscas">
+        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      </div>
+      <p class="formulario__input-error">El nombre del libro tiene que ser de mayor a 5 digitos</p>
+    </div>
+
+    <!-- Grupo:  editorial-->
+    <div class="formulario__grupo" id="grupo__nombre">
+      <label for="nombre" class="formulario__label">Editorial</label>
+      <div class="formulario__grupo-input">
+        <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Ingresa el editorial del libro">
+        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      </div>
+      <p class="formulario__input-error">El editorial del libro tiene que ser de 4 a 16 dígitos</p>
+    </div>
+
+    <!-- Grupo: Correo Electronico -->
+    <div class="formulario__grupo" id="grupo__correo">
+      <label for="correo" class="formulario__label">Genero</label>
+      <div class="formulario__grupo-input">
+        <input type="text" class="formulario__input" name="correo" id="correo" placeholder="Ingresa el genero del libro">
+        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      </div>
+      <p class="formulario__input-error">El Genero del libro debe tener mas 5 caracteres.</p>
+    </div>
+
+    <!-- Grupo: Fecha del libro -->
+    <div class="formulario__grupo" id="grupo__telefono">
+      <label for="telefono" class="formulario__label">Fecha de publicación</label>
+      <div class="formulario__grupo-input">
+        <input type="date" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      </div>
+      <p class="formulario__input-error">Este campo es obligatorio</p>
+    </div>
+
+    <div class="formulario__mensaje" id="formulario__mensaje">
+      <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+    </div>
+    <div class="formulario__mensaje_bien" id="formulario__mensaje_bien">
+       <p   id="formulario__mensaje-exito">Busqueda realizada exitosamente</p>
+    </div>
+
+    <div class="formulario__grupo formulario__grupo-btn-enviar">
+      <button type="submit"  class="formulario__btn">>BUSCAR</button>
+              <p  class="formulario__mensaje-exito" id="formulario__mensaje-exito">Busqueda realizada exitosamente</p>
+    </div>
+  </form>
+
+  <section class="posts" id="busqueda">
+
+          <div class="post" data-category="CSS">
+
+              <div class="ctn-img">
+              <img src="img/1.jpg" alt="">
+              </div>
+              <h2>El Señor de los Anillos (J.R.R. Tolkien)</h2>
+              <span>26 febrero 2020 - 1:32 am</span>
+              <ul class="ctn-tag">
+                  <li>Capitulos</li>
+                  <li>Descripción del libro</li>
+              </ul>
+              <a href="ficha.html"><button>Leer en linea</button></a>
+
+          </div>
+
+          <div class="post" data-category="HTML">
+
+              <div class="ctn-img"><img src="img/2.jpg" alt=""></div>
+              <h2></h2>
+              <span>26 febrero 2020 - 1:32 am</span>
+              <ul class="ctn-tag">
+                  <li>Capitulos</li>
+                  <li>Descripción del libro</li>
+              </ul>
+              <a href="ficha.html"><button>leer en linea</button></a>
+
+          </div>
+
+          <div class="post" data-category="JS">
+
+              <div class="ctn-img"><img src={{libro[0].imagen}} alt="" class="img"></div>
+              <h2>{{libro[0].TITULO}}, {{libro[0].imagen}}</h2>
+              <span>26 febrero 2020 - 1:32 am</span>
+              <ul class="ctn-tag">
+                  <li>Capitulos</li>
+                  <li>Descripción del libro</li>
+              </ul>
+              <a href="ficha.html"><button>leer en linea</button></a>
+
+          </div>
+
+          <div class="post" data-category="JS NODEJS VUE">
+
+              <div class="ctn-img"><img src="img/4.jpg" alt=""></div>
+              <h2>Crepúsculo – La saga (de Stephenie Meyer)</h2>
+              <span>26 febrero 2020 - 1:32 am</span>
+              <ul class="ctn-tag">
+                  <li>Capitulos</li>
+                  <li>Descripción del libro</li>
+              </ul>
+              <a href="ficha.html"><button>leer en linea</button></a>
+          </div>
+
+          <div class="post" data-category="CSS">
+
+              <div class="ctn-img"><img src="img/5.jpg" alt=""></div>
+              <h2>Lo que el viento se llevó (de Margaret Mitchell)</h2>
+              <span>26 febrero 2020 - 1:32 am</span>
+              <ul class="ctn-tag">
+                  <li>Capitulos</li>
+                  <li>Descripción del libro</li>
+              </ul>
+              <a href="#"><button>leer en linea</button></a>
+
+          </div>
+
+          <div class="post" data-category="PHP">
+
+              <div class="ctn-img"><img src="img/6.jpg" alt=""></div>
+              <h2>'Para Leer al anochecer' (de Charles Dickens) </h2>
+              <span>26 febrero 2020 - 1:32 am</span>
+              <ul class="ctn-tag">
+                  <li>Capitulos</li>
+                  <li>Descripción del libro</li>
+              </ul>
+              <a href="ficha.html"><button>leer en linea</button></a>
+          </div>
+
+          <div class="post" data-category="CSS NODEJS">
+
+              <div class="ctn-img"><img src="img/7.jpg" alt=""></div>
+              <h2>'La historia del loco'(de John Katzenbach).</h2>
+              <span>26 febrero 2020 - 1:32 am</span>
+              <ul class="ctn-tag">
+                  <li>Capitulos</li>
+                  <li>Descripción del libro</li>
+              </ul>
+              <a href="ficha.html"><button>leer en linea</button></a>
+          </div>
+
+
+
+
+  </section>
+
+  </div>
+

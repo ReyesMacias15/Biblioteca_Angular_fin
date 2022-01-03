@@ -1,0 +1,87 @@
+
+
+
+
+
+
+      <div class="formulario_titulo">
+          <br>
+          <br>
+          <h1>
+              Registro
+          </h1>
+          <!-- Fronte es la parte visual-->
+          <form action="/save" class="formulario"  #forma="ngForm" (ngSubmit)="submit()" >
+              <!--grupo de usuario-->
+              <div class ="formulario_grupo formulario_grupo" id="grupo_usuario">
+                      <label for="usuario" class="formulario_label">Usuario</label>
+                  <div class="formulario_grupo-input">
+                      <input type="text"class="formulario_input" [(ngModel)]="registro.USERNAME" name="usuario" id="usuario" placeholder="Usuario">
+                      <i class= "formulario_validacion-estado fas fa-times-circle"></i>
+                  </div>
+                      <p class="formulario_input-error"> El usuario debe contener de 4 a 15 digitos. Debe contener numero y letras.</p>
+              </div>
+
+
+
+              <!--grupo de contraseñas-->
+              <div class ="formulario_grupo" id="grupo_contraseña">
+                      <label for="contraseña" class="formulario_label">Contraseña</label>
+                  <div class="formulario_grupo-input">
+                      <input type="password"class="formulario_input" [(ngModel)]="registro.CONTRASENA"  name="contraseña" id="contraseña">
+                      <i class= "formulario_validacion-estado fas fa-times-circle"></i>
+                  </div>
+                      <p class="formulario_input-error"> La contraseña debe contener 5 digitos como minimo y debe incluir letras, numeros y signos</p>
+              </div>
+
+              <!--grupo de contraseñas 2-->
+              <div class ="formulario_grupo" id="grupo_contraseña2">
+                      <label for="contraseña2" class="formulario_label">Confirmar contraseña</label>
+                  <div class="formulario_grupo-input">
+                      <input type="password"class="formulario_input" name="contraseña2" id="contraseña2">
+                      <i class= "formulario_validacion-estado fas fa-times-circle"></i>
+                  </div>
+                      <p class="formulario_input-error"> La contraseña no coincide </p>
+              </div>
+
+              <!--grupo correo-->
+              <div class ="formulario_grupo" id="grupo_Correo">
+                          <label for="correo" class="formulario_label">Correo electronico</label>
+                  <div class="formulario_grupo-input">
+                      <input type="email"class="formulario_input" name="Correo" [(ngModel)]="registro.CORREO"  id="Correo" placeholder="ejemplocorreo@ejemplo.com">
+                      <i class= "formulario_validacion-estado fas fa-times-circle"></i>
+                  </div>
+                      <p class="formulario_input-error"> El correo solo puede contener letras y numeros</p>
+              </div>
+
+              <!--grupo telefono-->
+              <div class ="formulario_grupo" id="grupo_telefono">
+                      <label for="telefono" class="formulario_label">Telefono</label>
+                  <div class="formulario_grupo-input">
+                      <input type="text"class="formulario_input" [(ngModel)]="registro.CELULAR" name="telefono" id="telefono" placeholder="0999999999">
+                      <i class= "formulario_validacion-estado fas fa-times-circle"></i>
+                  </div>
+                      <p class="formulario_input-error"> Debe contener 10 digitos</p>
+              </div>
+
+
+              <!--Grupo de terminos y condiciones-->
+              <div class= "formulario_grupo" id="grupo_terminos">
+                  <label class="formulario__label">
+                      <input class="formulario_checkbox"type="checkbox" name="terminos" id="terminos">
+                      Acepto terminos y condiciones
+                  </label>
+              </div>
+
+              <div class="formulario_mensaje" id="formulario_mensaje">
+                  <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor, complete todos los datos correctamente </p>
+              </div>
+
+              <div  class = " formulario_grupo formulario_grupo-btn-enviar " >
+                  <br>
+                  <input  class="button-regresar" type = "submit" value="Enviar">
+                  <p  class = " formulario_mensaje-exito " id = " formulario_mensaje-exito " > Formulario enviado exitosamente! </p >
+                  <a  id="back" class="button-regresar">Regresar</a>
+              </div >
+          </form> <br>
+          <div class="sign-txt">¿Ya estas registrado? <a class="txt" href="Inicio de sesion1.html">Inicia Sesion ahora</a></div>

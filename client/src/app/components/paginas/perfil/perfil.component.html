@@ -1,0 +1,139 @@
+<div class="div3">
+  <div class="">
+      <div class="">
+          <h3 class=""><i class=""></i> &nbsp; MI CUENTA</h3>
+      </div>
+      <div class="">
+          <div class="">
+
+              <div class="">
+                  <form #forma="ngForm" (ngSubmit)="submit()">
+                      <fieldset class="form_personal">
+                          <legend><i class=""></i> &nbsp; Información personal</legend>
+                          <div class="">
+                              <div class="">
+
+                                  <div class="formulario_grupo" id="grupo_cedula">
+                                      <label  name="nombre"    class="">DNI/Cedula: {{perfil.NOMBRE_USUARIO}}  *</label>
+                                        <div  class="formulario__grupo-input">
+                                          <input  class="controls" type="tel" aria-label="nombre" name="nombre"  [(ngModel)]="perfil.NOMBRE_USUARIO " >
+
+
+                                        <span  class="formulario__input-error"> Formato de cedula no valido.</span><br/>
+                                        </div>
+                                        </div  >
+                                  <!--grupo Nombre-->
+                                  <div class="formulario_grupo" id="grupo_nombre">
+                                      <label class="">Nombre: *</label>
+                                      <div class="formulario__grupo-input">
+                                        <input class="controls" type="text" aria-label="nombre" name="nombre"  [(ngModel)]="perfil.NOMBRE_USUARIO" >
+                                        <span class="formulario__input-error">El nombre ingresado no es valido.</span><br/>
+                                      </div>
+                                  </div>
+                                  <div class="formulario_grupo" id="grupo_apellido">
+                                      <label class="">Apellidos: *</label>
+                                      <div class="formulario__grupo-input">
+                                        <input class="controls" type="text" aria-label="nombre" name="apellido" [(ngModel)]="perfil.APELLIDO_USUARIO"  id="apellido" placeholder="Reyes" >
+                                        <span class="formulario__input-error">El apellido ingresado no es valido.</span><br/>
+                                      </div>
+                                  </div>
+                                  <div class="formulario_grupo" id="grupo_telefonos">
+                                      <label class="">Celular: *</label>
+                                        <div class="formulario__grupo-input">
+                                          <input class="controls" type="" id="telefono"name="telefono"[(ngModel)]="perfil.CELULAR"  placeholder="0961553152">
+                                        <span class="formulario__input-error">El numero de telefono ingresado no es valido.</span><br/>
+                                        </div>
+                                        </div  >
+                                  <div class="col-xs-12">
+                                      <div class="">
+                                            <label class="">Dirección</label>
+                                            <textarea name="comentarios" id="comentarios"[(ngModel)]="perfil.DIRECCION" class="controls" rows="2" maxlength="100"></textarea>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </fieldset>
+                    <br>
+              <fieldset class="form_usuario">
+                  <legend><i class=""></i> &nbsp; Información de registro</legend>
+                  <div class="">
+                      <div class="">
+                          <div class="">
+                              <div class="">
+                                    <label class="">Nombre de usuario *</label>
+                                    <input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,15}" [(ngModel)]="perfil.USERNAME"  class="controls" type="text" name="nombre" maxlength="15 "placeholder="Jo Kazutora">
+                              </div>
+                          </div>
+                          <div class="formulario_grupo"  id="grupo_correo">
+                              <label class="">Correo *</label>
+                              <div class="formulario__grupo-input">
+                                <input class="controls" type="text"[(ngModel)]="perfil.CORREO" id="email" name="email" placeholder="jjrm1351828189gmail.com">
+                              <span class="formulario__input-error">El correo ingresado no es valido.</span><br/>
+                              </div>
+                          </div>
+                          <div class="">
+                              <div class="">
+                                  <label class="">Genero</label>
+                                  <div class="">
+                                      <label>
+                                          <input type="radio" name="optionsGenero" id="optionsRadios1" value="Masculino" checked=""><span class="circle"></span><span class="check"></span>
+                                          <i class=""></i> &nbsp; Masculino
+                                      </label>
+                                  </div>
+                                  <div class="">
+                                      <label>
+                                          <input type="radio" name="optionsGenero" id="optionsRadios2" value="Femenino"><span class=""></span><span class="check"></span>
+                                          <i class=""></i> &nbsp; Femenino
+                                      </label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </fieldset>
+              <br>
+              <fieldset class="form_usuario">
+                  <legend><i class=""></i> &nbsp; Contraseña</legend>
+
+                  <div class="">
+                      <div class="">
+                          <div class ="formulario_grupo" id="grupo_contraseña">
+                              <label class="">Contraseña actual *</label>
+                          <div class="formulario__grupo-input">
+                              <input type="password"class="controls" [(ngModel)]="perfil.CONTRASENA"name="contraseña_a" id="contraseña_a">
+
+                          </div>
+
+                      </div>
+                                  <!--grupo de contraseñas-->
+
+
+
+
+  <div class ="formulario_grupo" id="grupo_contraseña">
+      <label class="formulario_label">Contraseña</label>
+  <div class="formulario__grupo-input">
+      <input type="password"class="controls"id="contraseña" name="contraseña" >
+      <span class="formulario__input-error"> La contraseña debe contener 5 digitos como minimo y debe incluir letras, numeros y signos</span>
+  </div>
+
+</div>
+                     <!--grupo de contraseñas 2-->
+  <div class ="formulario_grupo" id="grupo_contraseña2">
+      <label for="contraseña2" class="formulario_label">Confirmar contraseña</label>
+  <div class="formulario__grupo-input">
+      <input type="password"class="controls" name="contraseña2" id="contraseña2">
+      <span class="formulario__input-error"> La contraseña no coincide </span>
+  </div>
+
+</div>
+
+                      </div>
+                  </div>
+              </fieldset>
+              <br>
+
+                  <button class="botons" type="submit"  > Enviar</button>
+                  <div class="notification">Actualizado</div>
+
+          </form>

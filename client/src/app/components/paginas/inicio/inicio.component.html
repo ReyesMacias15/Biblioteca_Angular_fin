@@ -1,0 +1,275 @@
+
+    <div class="container-all " id="move-content">
+
+      <div class="somos-container-cover">
+          <div class="somos-info-cover">
+              <h1>Bienvenido </h1>
+              <h2>“Una bliblioteca no es un conjunto de libros leídos, sino una compañía, un refugio y un proyecto de vida.”</h2>
+
+          </div>
+          <div class="post" data-category="CSS">
+  </div>
+
+<br><br>
+<br>
+<br>
+
+<br><br>
+<br>
+<br>
+
+
+
+  <div class="container">
+
+      <div class="card">
+          <img src="../../../../assets/img/coleccion.jpg">
+          <br><br>
+          <h1>Colecciones</h1>
+          <br><br>
+          <a href="blog.html">Ir a colecciones</a>
+      </div>
+
+      <div class="card">
+          <h2>Materias</h2>
+          <br>
+          <h4> Historia: <strong>4152 Libros</strong> </h4>
+          <br>
+          <h4>Medicina: <strong>5147 Libros</strong></h4>
+          <br>
+          <h4> Informatica: <strong>4517 Libros</strong></h4>
+          <br>
+          <h4> Derecho: <strong>3245 Libros</strong></h4>
+          <br>
+          <h4> Psicología: <strong>2354 Libros</strong></h4>
+          <br>
+          <h4> Arquitectura: <strong>3578 Libros</strong></h4>
+          <br>
+          <h4> Deportes: <strong>3245 Libros</strong></h4>
+      </div>
+
+      <div class="card">
+          <h2>Títulos más leídos</h2>
+          <br>
+          <h4>1. “Hamlet”</h4>
+          <br>
+          <h4>2. “El arte de la felicidad”</h4>
+          <br>
+          <h4>3. “Crimen y castigo”</h4>
+          <br>
+          <h4>4. “Cien años de soledad”</h4>
+          <br>
+          <h4>5. “El malestar en la cultura”</h4>
+          <br>
+          <h4>6. "La divina comedia" </h4>
+          <br>
+          <a href="blog.html">Ver más</a>
+      </div>
+  </div>
+<br><br><br>
+
+<h1 class="title">Libros Nuevos</h1>
+
+  <div class="container">
+
+      <div class="card" >
+          <img  src="../../../../assets/img/img1.jpg"><br><br>
+          <h4>Titulo</h4>
+          <p>Descripcion: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+          <button  id="btn2"  class="btn2"><a href="ficha.html">Detalle  </a> </button>
+      </div>
+
+      <div class="card">
+          <img src="../../../../assets/img/img2.jpg"><br><br>
+          <h4>Título</h4>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+          <button  id="btn2"  class="btn2"><a href="ficha.html">Detalle  </a> </button>
+      </div>
+
+      <div class="card">
+          <img src="../../../../assets/img/img3.jpg"> <br><br>
+          <h4>Título</h4>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+          <button  id="btn2"  class="btn2"><a href="ficha.html">Detalle  </a> </button>
+      </div>
+
+  </div>
+<br>
+<br>
+<br>
+<br>
+  <div class="container">
+
+      <div class="card">
+          <img src="../../../../assets/img/img4.jpg"><br><br>
+          <h4>Titulo</h4>
+          <p>Descripcion: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+          <button  id="btn2"  class="btn2"><a href="ficha.html">Detalle  </a> </button>
+      </div>
+
+      <div class="card">
+          <img src="../../../../assets/img/img5.jpg"><br><br>
+          <h4>Título</h4>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+          <button  id="btn2"  class="btn2"><a href="ficha.html">Detalle  </a> </button>
+      </div>
+
+      <div class="card">
+          <img src="../../../../assets/img/img6.jpg"> <br><br>
+          <h4>Título</h4>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+          <button  id="btn2"  class="btn2"><a href="ficha.html">Detalle  </a> </button>
+      </div>
+      <button  id="btn2"  class="btn2"><a href="blog.html">Ver mas libros  </a> </button>
+  </div>
+
+
+<br><br><br><br><br>
+
+
+</div>
+  <style>
+      .cookies {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: black;
+          color: white;
+          font-family: arial;
+          text-align: center;
+      }
+
+      .cookies__boton {
+          background: initial;
+          border: 2px solid white;
+          padding: 1rem;
+          font-size: 1rem;
+          color: white;
+          width: 5rem;
+          text-align: center;
+      }
+
+     </style>
+
+     <section class="cookies">
+         <h2 class="cookies__titulo">¿Aceptas nuestras Cookies?</h2>
+         <p class="cookies__texto">Usamos cookies para mejorar tu experiencia en la web.</p>
+         <div class="cookies__botones">
+             <button type="submit"class="cookies__boton cookies__boton--no">No</button>
+             <button class="cookies__boton cookies__boton--si">Si</button>
+         </div>
+     </section>
+
+     <!-- No borrar, aquí se generarán todas las etiquetas <script> si acepta el usuario -->
+     <div id="nuevosScripts"></div>
+
+     <script defer>
+     let cookies = () => {
+         //======================================================================
+         // COOKIES
+         //======================================================================
+
+         //-----------------------------------------------------
+         // Configuración
+         //-----------------------------------------------------
+         const urlsScriptsCookies = ['https://analytics.google.com', 'https://facebook.com'];
+
+         function contenidoScriptsCookies () {
+             ////////////  ¿Google Analítics? /////////////
+             ////////////  ¿Facebook Pixel? /////////////
+             ////////////  ¿Admob? /////////////
+             ////////////  etc  /////////////
+         }
+
+
+         //-----------------------------------------------------
+         // Variables
+         //-----------------------------------------------------
+         const seccionCookie = document.querySelector('section.cookies');
+         const cookieSi = document.querySelector('.cookies__boton--si');
+         const cookieNo = document.querySelector('.cookies__boton--no');
+         const nuevosScripts = document.querySelector('#nuevosScripts');
+
+         //-----------------------------------------------------
+         // Funciones
+         //-----------------------------------------------------
+
+         /**
+           * Método que oculta la sección de Cookie para siempre
+           */
+         function ocultarCookie() {
+             // Borra la sección de cookies en el HTML
+             seccionCookie.remove();
+         }
+
+         /**
+           * Método que marca las cookies como aceptadas
+           */
+         function aceptarCookies() {
+             // Oculta el HTML de cookies
+             ocultarCookie();
+             // Guarda que ha aceptado
+             localStorage.setItem('cookie', true);
+             // Tu codigo a ejecutar si aceptan las cookies
+             ejecutarSiAcepta();
+         }
+
+         /**
+           * Método que marca las cookies como denegadas
+           */
+         function denegarCookies() {
+             // Oculta el HTML de cookies
+             ocultarCookie();
+             // Guarda que ha aceptado
+             localStorage.setItem('cookie', false);
+         }
+
+         /**
+           * Método que ejecuta tu código si aceptan las cookies
+           */
+         function ejecutarSiAcepta() {
+             // Crea los <script>
+             urlsScriptsCookies.forEach((url) => {
+                 const nuevoScript = document.createElement('script');
+                 nuevoScript.setAttribute('src', url);
+                 nuevosScripts.appendChild(nuevoScript);
+             });
+             // Lanza los códigos
+             contenidoScriptsCookies();
+         }
+
+         /**
+           * Método que inicia la lógica
+           */
+         function iniciar() {
+             // Comprueba si en el pasado el usuario ha marcado una opción
+             if (localStorage.getItem('cookie') !== null) {
+                 if(localStorage.getItem('cookie') === 'true') {
+                     // Aceptó
+                     aceptarCookies();
+                 } else {
+                     // No aceptó
+                     denegarCookies();
+                 }
+             }
+         }
+
+         //-----------------------------------------------------
+         // Eventos
+         //-----------------------------------------------------
+         cookieSi.addEventListener('click',aceptarCookies, false);
+         cookieNo.addEventListener('click',denegarCookies, false);
+
+         return {
+             iniciar: iniciar
+         }
+     }
+
+     // Activa el código. Comenta si quieres desactivarlo.
+     cookies().iniciar();
+
+     </script>
+
+
+
